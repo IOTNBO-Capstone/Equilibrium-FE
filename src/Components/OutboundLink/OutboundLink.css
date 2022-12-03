@@ -1,0 +1,33 @@
+.outbound-page {
+  border: 2px solid orange;
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.thank-you {
+  margin-top: 12vh;
+  width: 80%;
+}
+
+.our-info {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ali, .candace, .dana, .emily, .taryn, .thomas, .will {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.linkedin-icon,
+.github-icon {
+    width: 13px;
+    /* filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(216deg) brightness(108%) contrast(101%); */
+    margin: 0px 5px 0px 5px;
+}
