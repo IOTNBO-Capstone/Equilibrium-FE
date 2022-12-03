@@ -12,13 +12,11 @@ class ResultsCard extends Component {
   render() {
     return (
       <div className="results-card">
+        <h2>Picture will go here </h2>
         <p>Practice Name: </p>
         <p>Address: </p>
         <p>Contact: </p>
-        <p>Rating: </p>
-        <p>Felt Safe: </p>
-        <p>Felt Heard: </p>
-        <p>Review Content: </p>
+        <p>Tags: </p>
       </div>
     )
   }

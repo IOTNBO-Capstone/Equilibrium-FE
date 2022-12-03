@@ -10,6 +10,8 @@ class ResultsPage extends Component {
     }
   }
 
+  // Function to map the providers
+
   render() {
     return(
       <div className="results-window">

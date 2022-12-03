@@ -1,0 +1,23 @@
+.provider-box {
+  border: 2px solid indigo;
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.provider-background {
+  border: 1px solid orange;
+  display: flex;
+  justify-content: space-around;
+}
+
+.provider-information {
+  border: 1px solid blue;
+}
+
+.provider-tags {
+  border: 1px solid red;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}

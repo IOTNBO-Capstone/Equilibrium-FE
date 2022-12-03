@@ -3,6 +3,7 @@ import LandingPage from './Components/LandingPage/LandingPage';
 import ResultsPage from './Components/ResultsPage/ResultsPage';
 import Resources from './Components/Resources/Resources';
 import OutboundLink from './Components/OutboundLink/OutboundLink';
+import ProviderPage from './Components/ProviderPage/ProviderPage';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <LandingPage />
         <ResultsPage />
         <Resources />
+        <ProviderPage />
         <OutboundLink />
     </div>
   );
