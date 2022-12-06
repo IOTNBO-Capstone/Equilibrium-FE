@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import TherapistCard from "../TherapistCard/TherapistCard";
 import "./LandingPage.css"
 
 class LandingPage extends Component {
@@ -9,21 +10,19 @@ class LandingPage extends Component {
     }
   }
 
+  // Function to map the providers
+
   render() {
-    return (
-      <div className="navigation-box">
-        <p>How can we help you today?</p>
-        <div className="navigation-buttons">
-          <div className="all-reviews selection"> <p>All Therapy Reviews</p></div>
-          <div className="top-reviews selection"><p>Top Rated Therapy Reviews</p></div>
-          <div className="specialty-reviews selection"><p>Specialty Therapy Reviews</p></div>
-          <div className="low-cost selection"><p>Low Cost Therapy Reviews</p></div>
-          <div className="sliding-cost selection"><p>Sliding Cost Therapy Reviews</p></div>
-          <div className="psychiatry reviews selection"><p>Psychiatry Reviews</p></div>
-          <div className="unused-tab selection"><p>Pending</p></div>
-          <div className="unused-tab selection"><p>Pending</p></div>
-          <div className="unused-tab selection"><p>Pending</p></div>
-          <div className="unused-tab selection"><p>Pending</p></div>
+    return(
+      <div className="results-window">
+        <p>Choose up to 5 additional filters</p>
+        <div className="filter-box">
+          <p>The checkboxes will go here</p>
+          <div className="results-cards">
+            <TherapistCard />
+            <TherapistCard />
+            <TherapistCard />
+          </div>
         </div>
       </div>
     )
