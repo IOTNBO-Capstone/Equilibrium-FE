@@ -1,7 +1,7 @@
 import React, {Component} from "react";
-import "./ResultsCard.css"
+import "./TherapistCard.css"
 
-class ResultsCard extends Component {
+class TherapistCard extends Component {
   constructor() {
     super()
     this.state = {
@@ -11,7 +11,7 @@ class ResultsCard extends Component {
 
   render() {
     return (
-      <div className="results-card">
+      <div className="therapist-card">
         <h2>Picture will go here </h2>
         <p>Practice Name: </p>
         <p>Address: </p>
@@ -22,4 +22,4 @@ class ResultsCard extends Component {
   }
 }
 
-export default ResultsCard
+export default TherapistCard

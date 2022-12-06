@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import "./ProviderPage.css"
+import "./TherapistPage.css"
 
-class ProviderPage extends Component {
+class TherapistPage extends Component {
   constructor() { 
     super()
     this.state = {
@@ -33,4 +33,4 @@ class ProviderPage extends Component {
   }
 }
 
-export default ProviderPage
+export default TherapistPage
