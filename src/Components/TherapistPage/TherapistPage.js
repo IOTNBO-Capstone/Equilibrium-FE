@@ -1,18 +1,21 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./TherapistPage.css";
 
 const TherapistPage = ( {individualTherapist} ) => {
-
-  // Function to map the providers
+  // const labels = individualTherapist.labels.forEach(label => {
+  //   console.log(label) 
+  // })
+  // console.log(labels)
 
     return(
       <div className="results-window">
-        <p>Choose up to 5 additional filters</p>
-        <div className="filter-box">
-          <p>The checkboxes will go here</p>
-          <div className="results-cards">
-          </div>
-        </div>
+        <img src={individualTherapist.imageUrl} alt='Therapist profile'/>
+        <h2>{individualTherapist.name}</h2>
+        <p>{individualTherapist.bio}</p>
+        <p>{individualTherapist.labels}</p>
+        <p>{individualTherapist.practice.name}</p>
+        <Link to='/'>Return to Main Page</Link>
       </div>
     )
 }

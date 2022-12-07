@@ -28,8 +28,7 @@ const App = () => {
         </Route>
         <Route path="/:id"
           render={({match}) => {
-            const individualTherapist = data.therapists.find(therapist => therapist.id === parseInt(match.params.id))
-            
+            const individualTherapist = data.therapists.find(therapist => therapist.id === match.params.id)
             return <TherapistPage individualTherapist={individualTherapist}/>
           }}/> 
         <Route path="/outbound">
