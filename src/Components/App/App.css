@@ -1,4 +1,4 @@
-.landing {
+.app-main {
   height: 100%;
   width: 100%;
   display: flex;
@@ -6,7 +6,7 @@
   align-items: center;
 }
 
-header {
+.app-header {
   border: 2px solid blue;
   height: 30vh;
   width: 98vw;
