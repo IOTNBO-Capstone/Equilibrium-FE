@@ -1,32 +1,39 @@
-import React, { Component } from "react";
-import TherapistCard from "../TherapistCard/TherapistCard";
+import React from "react";
+import { useTherapists } from '../../utilities';
+import TherapistCard from '../TherapistCard/TherapistCard';
 import "./LandingPage.css"
 
-class LandingPage extends Component {
-  constructor() {
-    super()
-    this.state = {
+const LandingPage = () => {
 
-    }
-  }
+  const { data, error, loading } = useTherapists();
+  
+  if (loading && !data) return "Loading...";
 
-  // Function to map the providers
+  if (error) return `${error.message}`;
 
-  render() {
-    return(
-      <div className="results-window">
-        <p>Choose up to 5 additional filters</p>
-        <div className="filter-box">
-          <p>The checkboxes will go here</p>
-          <div className="results-cards">
-            <TherapistCard />
-            <TherapistCard />
-            <TherapistCard />
-          </div>
-        </div>
-      </div>
+  console.log(data.therapists)
+
+  const cards = data.therapists.map(therapist => {
+    return (
+      <TherapistCard
+        id = {therapist.id}
+        key = {therapist.id}
+        name = {therapist.name}
+        labels = {therapist.labels}
+        imageUrl = {therapist.imageUrl}
+      />
     )
-  }
+  })
+
+  console.log(cards)
+
+  // function to populate the provider information
+
+    return (
+     <div className="provider-box">
+      {cards}
+     </div>
+    )
 }
 
 export default LandingPage

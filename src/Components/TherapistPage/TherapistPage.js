@@ -1,36 +1,20 @@
-import React, { Component } from "react";
-import { useTherapists } from '../../utilities';
-import TherapistCard from '../TherapistCard/TherapistCard';
+import React from "react";
+import TherapistCard from "../TherapistCard/TherapistCard";
 import "./TherapistPage.css"
 
 const TherapistPage = () => {
 
-  const { data, error, loading } = useTherapists();
-  
-  if (loading && !data) return "Loading...";
+  // Function to map the providers
 
-  if (error) return `${error.message}`;
-
-  console.log(data.therapists)
-
-  const cards = data.therapists.map(therapist => {
-    return (
-      <TherapistCard
-        id = {therapist.id}
-        key = {therapist.id}
-        name = {therapist.name}
-      />
-    )
-  })
-
-  console.log(cards)
-
-  // function to populate the provider information
-
-    return (
-     <div>
-      {cards}
-     </div>
+    return(
+      <div className="results-window">
+        <p>Choose up to 5 additional filters</p>
+        <div className="filter-box">
+          <p>The checkboxes will go here</p>
+          <div className="results-cards">
+          </div>
+        </div>
+      </div>
     )
 }
 
