@@ -1,6 +1,5 @@
 import React from "react";
-import TherapistCard from "../TherapistCard/TherapistCard";
-import "./TherapistPage.css"
+import "./TherapistPage.css";
 
 const TherapistPage = () => {
 

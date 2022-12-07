@@ -1,7 +1,7 @@
 import React from "react";
 import { useTherapists } from '../../utilities';
 import TherapistCard from '../TherapistCard/TherapistCard';
-import "./LandingPage.css"
+import "./LandingPage.css";
 
 const LandingPage = () => {
 
