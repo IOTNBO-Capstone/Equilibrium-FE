@@ -4,6 +4,7 @@ import "./TherapistPage.css";
 const TherapistPage = ( {individualTherapist} ) => {
 
   // Function to map the providers
+  console.log(individualTherapist)
 
     return(
       <div className="results-window">
