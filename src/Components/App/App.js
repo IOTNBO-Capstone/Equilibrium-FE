@@ -1,29 +1,41 @@
-// import { useTherapists } from '../../utilities';
 import './App.css';
 import LandingPage from '../LandingPage/LandingPage';
 import Resources from '../Resources/Resources';
 import OutboundLink from '../OutboundLink/OutboundLink';
 import TherapistPage from '../TherapistPage/TherapistPage';
+import { Switch, Route } from 'react-router-dom';
+import { useTherapists } from '../../utilities';
 
 const App = () => {
 
-  // const { data, error, loading } = useTherapists();
+  const { data, loading, error } = useTherapists();
+  if (loading && !data) return "Loading...";
+
+  if (error) return `${error.message}`;
   
-  // if (loading && !data) return "Loading...";
-
-  // if (error) return `${error.message}`;
-
-  // console.log(data.therapists)
 
   return (
     <main className="app-main">
       <header className="app-header">
         <h1>Equilibrium</h1>
       </header>
-      <LandingPage />
-      <Resources />
-      <TherapistPage />
-      <OutboundLink />
+      <Switch >
+        <Route exact path="/" >
+          <LandingPage />
+        </Route>
+        <Route exact path="/resources">
+          <Resources />
+        </Route>
+        <Route path="/:id"
+          render={({match}) => {
+            const individualTherapist = data.therapists.find(therapist => therapist.id === parseInt(match.params.id))
+            
+            return <TherapistPage individualTherapist={individualTherapist}/>
+          }}/> 
+        <Route path="/outbound">
+          <OutboundLink />
+        </Route>
+      </Switch>
     </main>
   );
 };

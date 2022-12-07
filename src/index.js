@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-// import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 import './index.css';
@@ -14,11 +14,11 @@ const client = new ApolloClient({
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  // <BrowserRouter>
+  <BrowserRouter>
     <ApolloProvider client={client}>
       <App />
     </ApolloProvider>
-  // </BrowserRouter>
+  </BrowserRouter>
 );
 
 reportWebVitals();

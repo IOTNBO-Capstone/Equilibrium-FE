@@ -1,7 +1,7 @@
 import React from "react";
 import "./TherapistPage.css";
 
-const TherapistPage = () => {
+const TherapistPage = ( {individualTherapist} ) => {
 
   // Function to map the providers
 

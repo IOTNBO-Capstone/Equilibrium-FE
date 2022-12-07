@@ -6,6 +6,7 @@ const GET_ALL_THERAPISTS = gql`
             id
             name
             labels
+            imageURL
             practices {
                 name
             }
@@ -14,7 +15,6 @@ const GET_ALL_THERAPISTS = gql`
 `
 // address
 // phoneNumber
-// imageURL
 
 export const useTherapists = () => {
     const { data, error, loading } = useQuery(GET_ALL_THERAPISTS)

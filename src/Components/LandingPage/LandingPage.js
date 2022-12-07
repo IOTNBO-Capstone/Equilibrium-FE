@@ -11,8 +11,6 @@ const LandingPage = () => {
 
   if (error) return `${error.message}`;
 
-  console.log(data.therapists)
-
   const cards = data.therapists.map(therapist => {
     return (
       <TherapistCard
@@ -24,8 +22,6 @@ const LandingPage = () => {
       />
     )
   })
-
-  console.log(cards)
 
   // function to populate the provider information
 
