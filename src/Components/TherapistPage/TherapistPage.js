@@ -1,36 +1,37 @@
 import React, { Component } from "react";
+import { useTherapists } from '../../utilities';
+import TherapistCard from '../TherapistCard/TherapistCard';
 import "./TherapistPage.css"
 
-class TherapistPage extends Component {
-  constructor() { 
-    super()
-    this.state = {
+const TherapistPage = () => {
 
-    }
-  }
+  const { data, error, loading } = useTherapists();
+  
+  if (loading && !data) return "Loading...";
+
+  if (error) return `${error.message}`;
+
+  console.log(data.therapists)
+
+  const cards = data.therapists.map(therapist => {
+    return (
+      <TherapistCard
+        id = {therapist.id}
+        key = {therapist.id}
+        name = {therapist.name}
+      />
+    )
+  })
+
+  console.log(cards)
 
   // function to populate the provider information
 
-  render() {
     return (
-      <div className="provider-box">
-        <div className="provider-background">
-          <p>This will be an image of the provider</p>
-          <p>This will be the provider's background information paragraph.</p>
-        </div>
-        <div className="provider-information">
-          <h3>Practice Information: </h3>
-          <h3>Name: </h3>
-          <h3>Contact: </h3>
-          <h3>Address: </h3>
-          <h3>Website: </h3>
-        </div>
-        <div className="provider-tags">
-          <p>The tags will be centered here</p>
-        </div>
-      </div>
+     <div>
+      {cards}
+     </div>
     )
-  }
 }
 
 export default TherapistPage

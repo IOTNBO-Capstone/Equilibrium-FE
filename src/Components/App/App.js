@@ -1,5 +1,7 @@
-import { useUsers } from '../../utilities';
+// import { useTherapists } from '../../utilities';
 import './App.css';
+import React, { useState, useEffect } from 'react';
+import { Route, Switch } from 'react-router-dom';
 import LandingPage from '../LandingPage/LandingPage';
 import Resources from '../Resources/Resources';
 import OutboundLink from '../OutboundLink/OutboundLink';
@@ -7,12 +9,13 @@ import TherapistPage from '../TherapistPage/TherapistPage';
 
 const App = () => {
 
-  const { data, error, loading } = useUsers();
+  // const { data, error, loading } = useTherapists();
+  
+  // if (loading && !data) return "Loading...";
 
-  if (loading) return "Loading...";
-  if (error) return `${error.message}`;
+  // if (error) return `${error.message}`;
 
-  console.log(data);
+  // console.log(data.therapists)
 
   return (
     <main className="app-main">
