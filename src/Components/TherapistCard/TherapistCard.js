@@ -1,25 +1,17 @@
-import React, {Component} from "react";
-import "./TherapistCard.css"
+import React from "react";
+import "./TherapistCard.css";
 
-class TherapistCard extends Component {
-  constructor() {
-    super()
-    this.state = {
+const TherapistCard = ({ id, name, labels, imageUrl }) => {
 
-    }
-  }
-
-  render() {
     return (
       <div className="therapist-card">
-        <h2>Picture will go here </h2>
-        <p>Practice Name: </p>
+        <img src={imageUrl} alt="therapist profile"/>
+        <p>Name: {name} </p>
         <p>Address: </p>
         <p>Contact: </p>
-        <p>Tags: </p>
+        <p>Tags: {labels} </p>
       </div>
     )
-  }
 }
 
 export default TherapistCard

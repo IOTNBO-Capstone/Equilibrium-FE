@@ -5,9 +5,6 @@ const GET_ALL_THERAPISTS = gql`
         therapists {
             id
             name
-            address
-            phoneNumber
-            imageURL
             labels
             practices {
                 name
@@ -15,8 +12,11 @@ const GET_ALL_THERAPISTS = gql`
         }
     }
 `
+// address
+// phoneNumber
+// imageURL
 
-export const useUsers = () => {
+export const useTherapists = () => {
     const { data, error, loading } = useQuery(GET_ALL_THERAPISTS)
 
     return { data, error, loading }
