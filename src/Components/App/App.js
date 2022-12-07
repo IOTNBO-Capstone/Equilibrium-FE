@@ -15,15 +15,15 @@ const App = () => {
   console.log(data);
 
   return (
-    <div className="landing">
-      <header className="iotnbo">
-        <h1>It's Okay To Not Be Okay!</h1>
+    <main className="app-main">
+      <header className="app-header">
+        <h1>Equilibrium</h1>
       </header>
       <LandingPage />
       <Resources />
       <TherapistPage />
       <OutboundLink />
-    </div>
+    </main>
   );
 };
 
