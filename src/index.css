@@ -1,6 +1,7 @@
 html {
   background-image: url('./Assets/Equilibrium-bkgd.png');
-  background-size: cover;
+  background-size: 100%;
   background-repeat: no-repeat;
   background-position: fixed;
+  color: #FFFFFF;
 }

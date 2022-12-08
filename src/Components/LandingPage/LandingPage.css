@@ -1,23 +1,13 @@
-.provider-box {
-  border: 2px solid indigo;
-  width: 80vw;
+.therapist-container {
   display: flex;
-  flex-direction: column;
-}
-
-.provider-background {
-  border: 1px solid orange;
-  display: flex;
-  justify-content: space-around;
-}
-
-.provider-information {
-  border: 1px solid blue;
-}
-
-.provider-tags {
-  border: 1px solid red;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 90vw;
+  height: 75vh;
+  background: #000000;
+  opacity: 0.8;
+  box-shadow: 0px 0px 4px 4px rgba(255, 255, 255, 0.5);
+  padding: 1%;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
