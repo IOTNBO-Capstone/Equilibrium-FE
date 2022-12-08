@@ -6,7 +6,7 @@ import "./LandingPage.css";
 const LandingPage = () => {
 
   const { data, error, loading } = useTherapists();
-  
+
   if (loading && !data) return "Loading...";
 
   if (error) return `${error.message}`;
@@ -14,22 +14,33 @@ const LandingPage = () => {
   const cards = data.therapists.map(therapist => {
     return (
       <TherapistCard
-        id = {therapist.id}
-        key = {therapist.id}
-        name = {therapist.name}
-        labels = {therapist.labels}
-        imageUrl = {therapist.imageUrl}
+        id={ therapist.id }
+        key={ therapist.id }
+        name={ therapist.name }
+        labels={ therapist.labels }
+        imageUrl={ therapist.imageUrl }
+        address={ therapist.address }
+        phoneNumber={ therapist.phoneNumber }
       />
-    )
-  })
+    );
+  });
 
-  // function to populate the provider information
+  // const getFilterTags = data.therapists.reduce((list, therapist) => {
+  //   therapist.labels.forEach(label => {
+  //     if (!list.include(label)) {
+  //       list.push(label);
+  //     }
+  //   });
+  //   return list;
+  // }, []);
 
-    return (
-     <div className="provider-box">
-      {cards}
-     </div>
-    )
-}
+  // console.log(getFilterTags);
 
-export default LandingPage
+  return (
+    <div className="therapist-container">
+      { cards }
+    </div>
+  );
+};
+
+export default LandingPage;
