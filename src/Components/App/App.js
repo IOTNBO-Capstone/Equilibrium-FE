@@ -12,12 +12,12 @@ const App = () => {
   if (loading && !data) return "Loading...";
 
   if (error) return `${error.message}`;
-  
 
+  console.log(data);
   return (
     <main className="app-main">
       <header className="app-header">
-        <h1>Equilibrium</h1>
+        <h1 >Equilibrium</h1>
       </header>
       <Switch >
         <Route exact path="/" >
@@ -27,10 +27,10 @@ const App = () => {
           <Resources />
         </Route>
         <Route path="/:id"
-          render={({match}) => {
-            const individualTherapist = data.therapists.find(therapist => therapist.id === match.params.id)
-            return <TherapistPage individualTherapist={individualTherapist}/>
-          }}/> 
+          render={ ({ match }) => {
+            const individualTherapist = data.therapists.find(therapist => therapist.id === match.params.id);
+            return <TherapistPage individualTherapist={ individualTherapist } />;
+          } } />
         <Route path="/outbound">
           <OutboundLink />
         </Route>
