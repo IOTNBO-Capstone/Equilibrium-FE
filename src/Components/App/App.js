@@ -7,13 +7,12 @@ import { Switch, Route } from 'react-router-dom';
 import { useTherapists } from '../../utilities';
 
 const App = () => {
-
   const { data, loading, error } = useTherapists();
+
   if (loading && !data) return "Loading...";
 
   if (error) return `${error.message}`;
 
-  console.log(data);
   return (
     <main className="app-main">
       <header className="app-header">
@@ -29,6 +28,7 @@ const App = () => {
         <Route path="/:id"
           render={ ({ match }) => {
             const individualTherapist = data.therapists.find(therapist => therapist.id === match.params.id);
+            console.log(individualTherapist);
             return <TherapistPage individualTherapist={ individualTherapist } />;
           } } />
         <Route path="/outbound">
