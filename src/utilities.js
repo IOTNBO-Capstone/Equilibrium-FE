@@ -8,41 +8,19 @@ const GET_ALL_THERAPISTS = gql`
             phoneNumber
             name
             labels
-            imageURL
-            practices {
+            imageUrl
+            bio
+            practice {
+                id
                 name
+                websiteUrl
             }
         }
     }
 `;
-
-// const GET_INDIVIDUAL_THERAPIST = gql`
-//     query {
-//         therapists {
-//             id
-//             address
-//             phoneNumber
-//             name
-//             labels
-//             imageURL
-//             bio
-//             practices {
-//                 name
-//                 websiteUrl
-//             }
-//         }
-//     }
-// `;
 
 export const useTherapists = () => {
     const { data, error, loading } = useQuery(GET_ALL_THERAPISTS);
 
     return { data, error, loading };
 };
-
-
-// export const useIndividual = () => {
-//     const { data, error, loading } = useQuery(GET_INDIVIDUAL_THERAPIST);
-
-//     return { data, error, loading };
-// };
