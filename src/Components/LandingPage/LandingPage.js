@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useTherapists } from '../../utilities';
 import TherapistCard from '../TherapistCard/TherapistCard';
 import "./LandingPage.css";
@@ -8,6 +8,11 @@ const LandingPage = () => {
   const [filteredTherapists, setFilteredTherapists] = useState([]);
 
   const { data, error, loading } = useTherapists();
+
+  useEffect(() => {
+    getTherapistByTag();
+    // eslint-disable-next-line
+  }, [filteredTags]);
 
   const getFilterTags = data.therapists.reduce((list, therapist) => {
     const formatLabels = JSON.parse(therapist.labels);
@@ -46,23 +51,40 @@ const LandingPage = () => {
     );
   });
 
-  const allCards = data.therapists.map(therapist => {
-    return (
-      <TherapistCard
-        id={ therapist.id }
-        key={ therapist.id }
-        name={ therapist.name }
-        labels={ therapist.labels }
-        imageUrl={ therapist.imageUrl }
-        address={ therapist.address }
-        phoneNumber={ therapist.phoneNumber }
-        practice={ therapist.practice.name }
-      />
-    );
-  });
+  const getTherapistByTag = () => {
+    const filtered = data.therapists.reduce((list, therapist) => {
+      const formatLabels = JSON.parse(therapist.labels);
 
-  console.log('therapist', filteredTherapists);
-  console.log('tags', filteredTags);
+      filteredTags.forEach(tag => {
+        if (formatLabels.includes(tag)) {
+          list.push(therapist);
+        }
+      });
+
+      return list;
+    }, []);
+
+    setFilteredTherapists(filtered);
+  };
+
+  const displayCards = () => {
+    const therapists = filteredTherapists.length ? filteredTherapists : data.therapists;
+    return therapists.map(therapist => {
+      return (
+        <TherapistCard
+          id={ therapist.id }
+          key={ therapist.id }
+          name={ therapist.name }
+          labels={ therapist.labels }
+          imageUrl={ therapist.imageUrl }
+          address={ therapist.address }
+          phoneNumber={ therapist.phoneNumber }
+          practice={ therapist.practice.name }
+        />
+      );
+    });
+  };
+
   return (
     <section className="landing-page-container">
       <div className="container search-tags-container">
@@ -71,7 +93,7 @@ const LandingPage = () => {
       <div className="container therapist-cards-container">
         { (loading && !data) && <h1>Loading...</h1> }
         { error && <h1>There was an error loading the data. { `${error.message}` }</h1> }
-        { allCards }
+        { displayCards() }
       </div>
     </section>
   );
