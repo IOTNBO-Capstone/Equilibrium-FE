@@ -1,6 +1,6 @@
 import React from "react";
 
-const Resources = () => {
+const Footer = () => {
   return (
     <div className="resources">
       <p>The resources from Dana's Gist will live here</p>
@@ -8,4 +8,4 @@ const Resources = () => {
   )
 }
 
-export default Resources
+export default Footer

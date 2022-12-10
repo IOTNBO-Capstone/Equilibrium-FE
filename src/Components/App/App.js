@@ -1,6 +1,6 @@
 import './App.css';
 import LandingPage from '../LandingPage/LandingPage';
-import Resources from '../Resources/Resources';
+import Footer from '../Footer/Footer';
 import OutboundLink from '../OutboundLink/OutboundLink';
 import TherapistPage from '../TherapistPage/TherapistPage';
 import { Switch, Route } from 'react-router-dom';
@@ -22,9 +22,6 @@ const App = () => {
         <Route exact path="/" >
           <LandingPage />
         </Route>
-        <Route exact path="/resources">
-          <Resources />
-        </Route>
         <Route path="/:id"
           render={ ({ match }) => {
             const individualTherapist = data.therapists.find(therapist => therapist.id === match.params.id);
@@ -35,6 +32,7 @@ const App = () => {
           <OutboundLink />
         </Route>
       </Switch>
+      <Footer />
     </main>
   );
 };
