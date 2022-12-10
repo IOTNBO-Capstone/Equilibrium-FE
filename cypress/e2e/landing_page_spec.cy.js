@@ -85,7 +85,8 @@ describe('Landing Page Flows', () => {
       // .should('have.length', 5)
   });
 
-  it('', () => {
-    
+  it.only('Should be able to click a therapist\'s card and go to their individual page', () => {
+    cy.get('[href="/1"]').click()
+    cy.url().should('eq', 'http://localhost:3000/1')
   })
 });
