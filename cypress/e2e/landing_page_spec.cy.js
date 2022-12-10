@@ -73,9 +73,32 @@ describe('Landing Page Flows', () => {
       .contains('Grief Counseling')
   });
 
-  it('Should have a footer with a links external resources', () => {
+  it('Should have a footer with links to external resources', () => {
+    cy.get('.resources')
+      .should('exist')
+
+    cy.get('.general')
+      .should('exist')
+    cy.get('.general > h3')
+      .should('exist')
+      .contains('General Mental Health')
+    cy.get('.general > .webLink')
+      .should('exist')
     
-  })
+    cy.get('.coping')
+      .should('exist')
+    cy.get('.coping > h3')
+      .should('exist')
+      .contains('Coping Skills')
+    
+    cy.get('.help-lines')
+      .should('exist')
+    cy.get('.help-lines > h3')
+      .should('exist')
+      .contains('Help Lines')
+    cy.get('.help-lines > .webLink')
+      .should('exist')
+  });
 
   it('Should be able to filter by tag', () => {
     cy.get('.search-tags-container')
@@ -89,8 +112,8 @@ describe('Landing Page Flows', () => {
       // .should('have.length', 5)
   });
 
-  it.only('Should be able to click a therapist\'s card and go to their individual page', () => {
+  it('Should be able to click a therapist\'s card and go to their individual page', () => {
     cy.get('[href="/1"]').click()
     cy.url().should('eq', 'http://localhost:3000/1')
-  })
+  });
 });
