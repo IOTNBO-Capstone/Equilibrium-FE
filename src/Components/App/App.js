@@ -1,6 +1,6 @@
 import './App.css';
 import LandingPage from '../LandingPage/LandingPage';
-import Resources from '../Resources/Resources';
+import Footer from '../Footer/Footer';
 import OutboundLink from '../OutboundLink/OutboundLink';
 import TherapistPage from '../TherapistPage/TherapistPage';
 import { Switch, Route } from 'react-router-dom';
@@ -22,9 +22,6 @@ const App = () => {
         <Route exact path="/" >
           <LandingPage />
         </Route>
-        <Route exact path="/resources">
-          <Resources />
-        </Route>
         <Route exact path="/outbound">
           <OutboundLink />
         </Route>
@@ -35,6 +32,7 @@ const App = () => {
             return <TherapistPage individualTherapist={ individualTherapist } />;
           } } />
       </Switch>
+      <Footer />
     </main>
   );
 };
