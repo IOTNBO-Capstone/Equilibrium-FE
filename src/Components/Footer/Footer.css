@@ -1,0 +1,21 @@
+.footer {
+  border: 2px solid red;
+  display: flex;
+  flex-direction: column;
+}
+
+.resources {
+  border: 2px solid blue;
+}
+
+.general {
+  border: 2px solid green;
+}
+
+.coping {
+  border: 2px solid white;
+}
+
+.help-lines {
+  border: 2px solid orange;
+}
