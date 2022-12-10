@@ -28,8 +28,16 @@ const App = () => {
         <Route path="/:id"
           render={ ({ match }) => {
             const individualTherapist = data.therapists.find(therapist => therapist.id === match.params.id);
-            console.log(individualTherapist);
-            return <TherapistPage individualTherapist={ individualTherapist } />;
+            return <TherapistPage 
+              id={ individualTherapist.id } 
+              key={ individualTherapist.id } 
+              name={ individualTherapist.name } 
+              address={ individualTherapist.address } 
+              phoneNumber={ individualTherapist.phoneNumber } 
+              labels={ individualTherapist.labels } 
+              imageUrl={ individualTherapist.imageUrl}
+              bio={ individualTherapist.bio } 
+              practice={individualTherapist.practice }/>;
           } } />
       </Switch>
       <Footer />

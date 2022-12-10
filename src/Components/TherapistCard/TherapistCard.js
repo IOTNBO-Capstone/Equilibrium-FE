@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import PropTypes from 'prop-types';
 import "./TherapistCard.css";
 
 const TherapistCard = ({ id, name, labels, imageUrl, address, phoneNumber, practice }) => {
@@ -10,6 +11,7 @@ const TherapistCard = ({ id, name, labels, imageUrl, address, phoneNumber, pract
   const listLabels = JSON.parse(labels);
   const formatLabels = listLabels.map((label, index) => <li key={ index } className="one-label">{ label }</li>);
 
+  //TODO
   // phoneNumber needs to be formated for consistency
   // currently coming back as (111)111-1111 or 111-111-1111 or 111.111.1111
 
@@ -35,3 +37,13 @@ const TherapistCard = ({ id, name, labels, imageUrl, address, phoneNumber, pract
 };
 
 export default TherapistCard;
+
+TherapistCard.propTypes = {
+  id: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  labels: PropTypes.string.isRequired,
+  imageUrl: PropTypes.string.isRequired,
+  address: PropTypes.string.isRequired,
+  phoneNumber: PropTypes.string.isRequired,
+  practice: PropTypes.string.isRequired
+}
