@@ -19,7 +19,9 @@ const TherapistPage = ({ individualTherapist }) => {
       <p>{ individualTherapist.practice.name }</p>
       <p>{ street }</p>
       <p>{ cityState }</p>
-      <p>{ individualTherapist.practice.websiteUrl }</p>
+      <Link to='/outbound'>
+        <p>{ individualTherapist.practice.websiteUrl }</p>
+      </Link>
       <br />
       <div className="labels-container">
         { labels }
