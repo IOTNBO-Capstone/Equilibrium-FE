@@ -73,9 +73,47 @@ describe('Landing Page Flows', () => {
       .contains('Grief Counseling')
   });
 
-  it('Should have a footer with a links external resources', () => {
+  it.only('Should have a footer with links to external resources', () => {
+    cy.get('.resources')
+      .should('exist')
+
+    cy.get('.general')
+      .should('exist')
+    cy.get('.general > h3')
+      .should('exist')
+      .contains('General Mental Health')
+    cy.get('.general > .webLink')
+      .should('exist')
     
-  })
+    cy.get('.coping')
+      .should('exist')
+    cy.get('.coping > h3')
+      .should('exist')
+      .contains('Coping Skills')
+    cy.get('[href="https://success.oregonstate.edu/sites/success.oregonstate.edu/files/LearningCorner/Tools/stress_management_strategies.pdf"]')
+      .should('exist')
+      .contains('Stress Management')
+    cy.get('[href="https://www.health.harvard.edu/blog/strategies-to-promote-better-sleep-in-these-uncertain-times-2020032719333"]')
+      .should('exist')
+      .contains('Better Sleep')
+    cy.get('[href="https://www.restorecenterla.com/10-coping-skills-for-addiction-recovery/"]')
+      .should('exist')  
+      .contains('Addiction Recovery')
+    cy.get('[href="https://www.threeoakshospice.com/blog/bereavement-strategies-coping-with-grief-loss/"]')
+      .should('exist')
+      .contains('Bereavement Strategies')
+    cy.get('[href="https://ccofmooresville.com/101-ways-to-cope-with-anxiety-and-depression/"]')
+      .should('exist')
+      .contains('Anxiety and Depression')
+    
+    cy.get('.help-lines')
+      .should('exist')
+    cy.get('.help-lines > h3')
+      .should('exist')
+      .contains('Help Lines')
+    cy.get('.help-lines > .webLink')
+      .should('exist')
+  });
 
   it('Should be able to filter by tag', () => {
     cy.get('.search-tags-container')
@@ -89,8 +127,8 @@ describe('Landing Page Flows', () => {
       // .should('have.length', 5)
   });
 
-  it.only('Should be able to click a therapist\'s card and go to their individual page', () => {
+  it('Should be able to click a therapist\'s card and go to their individual page', () => {
     cy.get('[href="/1"]').click()
     cy.url().should('eq', 'http://localhost:3000/1')
-  })
+  });
 });
