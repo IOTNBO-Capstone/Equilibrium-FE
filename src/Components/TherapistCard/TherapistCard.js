@@ -9,7 +9,8 @@ const TherapistCard = ({ id, name, labels, imageUrl, address, phoneNumber, pract
   const cityState = splitAdress.slice(1, 3).join(', ');
 
   const listLabels = JSON.parse(labels);
-  const formatLabels = listLabels.map((label, index) => <li key={ index } className="one-label">{ label }</li>);
+  console.log(listLabels);
+  const formatLabels = listLabels.map((label, index) => <li key={ `${label}${index}` } className="one-label">{ label }</li>);
 
   //TODO
   // phoneNumber needs to be formated for consistency
