@@ -46,7 +46,7 @@ describe('Individual Therapist Flows', () => {
   //   cy.url().should('eq', 'http://localhost:3000/outbound')
   // })
 
-  it('Shoudl be able to return to the landing page on button click', () => {
+  it('Should be able to return to the landing page on button click', () => {
     cy.get('button').click()
     cy.url().should('eq', 'http://localhost:3000/')
   })
