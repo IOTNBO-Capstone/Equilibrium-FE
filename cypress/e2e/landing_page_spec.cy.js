@@ -73,6 +73,10 @@ describe('Landing Page Flows', () => {
       .contains('Grief Counseling')
   });
 
+  it('Should have a footer with a links external resources', () => {
+    
+  })
+
   it('Should be able to filter by tag', () => {
     cy.get('.search-tags-container')
       .children()
