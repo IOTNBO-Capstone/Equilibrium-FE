@@ -1,0 +1,20 @@
+{
+  "data": {
+    "therapists": [
+      {
+        "id": "1",
+        "address": "Suite 954 373 Billy Ville, West Judsonmouth, MS 21150",
+        "phoneNumber": "863-571-0641",
+        "name": "Sarah Jones",
+        "labels": "[\"Sliding Scale\", \"Works with Neurodivergence\", \"Grief Counseling\", \"Works with Depression\"]",
+        "imageUrl": "https://loremflickr.com/300/300",
+        "bio": "here to stay",
+        "practice": {
+          "id": "1",
+          "name": "ABC therapy",
+          "websiteUrl": "WWW.ABCD.com"
+        }
+      }
+    ]
+  }
+}

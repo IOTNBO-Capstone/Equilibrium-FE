@@ -7,7 +7,7 @@ import App from './Components/App/App';
 import reportWebVitals from './reportWebVitals';
 
 const client = new ApolloClient({
-  uri: 'https://b4e60499-e3a0-4c58-b2c4-78c2f78fc554.mock.pstmn.io/graphql',
+  uri: 'https://equilibrium.herokuapp.com/graphql',
   cache: new InMemoryCache()
 });
 
