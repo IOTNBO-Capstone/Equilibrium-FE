@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from 'react-router-dom'
 import "./OutboundLink.css"
 import gitHubIcon from "../../Assets/github.png"
 import linkedInIcon from "../../Assets/linkedin.png"
@@ -87,6 +88,9 @@ const OutboundLink = () => {
           </div>
         </div>
       </div>
+      <Link to='/'>
+        <button>Return to Main Page</button>
+      </Link>
     </div>
   )
 }
