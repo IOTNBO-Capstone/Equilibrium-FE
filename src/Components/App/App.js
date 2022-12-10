@@ -22,15 +22,15 @@ const App = () => {
         <Route exact path="/" >
           <LandingPage />
         </Route>
+        <Route exact path="/outbound">
+          <OutboundLink />
+        </Route>
         <Route path="/:id"
           render={ ({ match }) => {
             const individualTherapist = data.therapists.find(therapist => therapist.id === match.params.id);
             console.log(individualTherapist);
             return <TherapistPage individualTherapist={ individualTherapist } />;
           } } />
-        <Route path="/outbound">
-          <OutboundLink />
-        </Route>
       </Switch>
       <Footer />
     </main>
