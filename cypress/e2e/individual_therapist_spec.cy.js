@@ -41,10 +41,10 @@ describe('Individual Therapist Flows', () => {
       .contains('Return to Main Page')
   });
 
-  // it('Should be able to visit the therapist\'s practice site', () => {
-  //   cy.get('.individual-section > :nth-child(8)').click()
-  //   cy.url().should('eq', 'http://localhost:3000/outbound')
-  // })
+  it('Should be able to visit the therapist\'s practice site', () => {
+    cy.get('.individual-section > :nth-child(8)').click()
+    cy.url().should('eq', 'http://localhost:3000/outbound')
+  })
 
   it('Should be able to return to the landing page on button click', () => {
     cy.get('button').click()
