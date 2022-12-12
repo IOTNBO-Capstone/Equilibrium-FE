@@ -15,15 +15,15 @@ describe('Landing Page Flows', () => {
       .should('be.visible')
   });
 
-  it('Should display optional labels to filter by', () => {
+  it.only('Should display optional labels to filter by', () => {
     cy.get('.search-tags-container')
     .children()
     .should('be.visible')
     .should('have.length', 13)
-    cy.get(':nth-child(13) > label')
+    cy.get('[data-cy="label-12"]')
       .should('exist')
       .contains('POC')
-    cy.get(':nth-child(14) > label')
+      cy.get('[data-cy="label-13"]')
       .should('not.exist')
   });
 
@@ -73,7 +73,7 @@ describe('Landing Page Flows', () => {
       .contains('Grief Counseling')
   });
 
-  it.only('Should have a footer with links to external resources', () => {
+  it('Should have a footer with links to external resources', () => {
     cy.get('.resources')
       .should('exist')
 
