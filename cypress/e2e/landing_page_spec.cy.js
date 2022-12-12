@@ -15,7 +15,7 @@ describe('Landing Page Flows', () => {
       .should('be.visible')
   });
 
-  it.only('Should display optional labels to filter by', () => {
+  it('Should display optional labels to filter by', () => {
     cy.get('.search-tags-container')
     .children()
     .should('be.visible')
@@ -38,7 +38,7 @@ describe('Landing Page Flows', () => {
       .should('not.exist')
   });
 
-  it('Should have a therapist\'s information', () => {
+  it.only('Should have a therapist\'s information', () => {
     cy.get('[href="/1"]')
       .should('exist')
     cy.get('[href="/1"] > img')
