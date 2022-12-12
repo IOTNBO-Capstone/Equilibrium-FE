@@ -38,7 +38,7 @@ describe('Landing Page Flows', () => {
       .should('not.exist')
   });
 
-  it.only('Should have a therapist\'s information', () => {
+  it('Should have a therapist\'s information', () => {
     cy.get('[href="/1"]')
       .should('exist')
     cy.get('[href="/1"] > img')
