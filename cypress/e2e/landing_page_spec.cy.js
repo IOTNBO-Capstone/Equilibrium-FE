@@ -115,7 +115,7 @@ describe('Landing Page Flows', () => {
       .should('exist')
   });
 
-  it.only('Should be able to filter by tag', () => {
+  it('Should be able to filter by tag', () => {
     cy.get('[data-cy="search-tags"]')
       .children()
       .should('be.visible')
