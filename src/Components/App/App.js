@@ -3,6 +3,7 @@ import LandingPage from '../LandingPage/LandingPage';
 import Footer from '../Footer/Footer';
 import OutboundLink from '../OutboundLink/OutboundLink';
 import TherapistPage from '../TherapistPage/TherapistPage';
+import ErrorMessage from '../ErrorMessage/ErrorMessage';
 import { Switch, Route } from 'react-router-dom';
 import { useTherapists } from '../../utilities';
 
@@ -12,8 +13,9 @@ const App = () => {
   if (loading && !data) return "Loading...";
 
   if (error) return `${error.message}`;
-
+  
   return (
+    //error && <error component goes here>, then delete line 14
     <main className="app-main">
       <header className="app-header">
         <h1 >Equilibrium</h1>
