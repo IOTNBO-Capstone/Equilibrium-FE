@@ -36,7 +36,7 @@ const LandingPage = () => {
 
   const searchTags = getFilterTags.map((tag, index) => {
     return (
-      <form key={ index } className="single-tag">
+      <form key={ index } className="single-tag" data-cy={ `label-${index}` }>
         <input
           type="checkbox"
           id={ `tag${index}` }
