@@ -4,7 +4,7 @@ describe('Individual Therapist Flows', () => {
     cy.visit('http://localhost:3000/1')
   });
 
-  it.only('Should display the therapist\'s information', () => {
+  it('Should display the therapist\'s information', () => {
     cy.get('[data-cy="individual-therapist"]')
       .should('exist')
     cy.get('[data-cy="https://loremflickr.com/300/300-1"]')

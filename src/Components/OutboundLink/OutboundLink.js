@@ -6,11 +6,11 @@ import linkedInIcon from "../../Assets/linkedin.png"
 
 const OutboundLink = () => {
   return (
-    <div className="outbound-page">
-      <p className="thank-you">Thank you for viewing our application. We think it's important to take care of yourself and to be able to find the help you need. Humankind: be both.</p>
+    <div className="outbound-page" data-cy='outbound-container'>
+      <p className="thank-you" data-cy='thanks'>Thank you for viewing our application. We think it's important to take care of yourself and to be able to find the help you need. Humankind: be both.</p>
       <p>We can be found in the following locations: </p>
       <div className="our-info">
-        <div className="ali">
+        <div className="ali" data-cy='ali'>
           <h4>Ali Nix:</h4>
           <div className="github">
             <img src={gitHubIcon} alt='github-icon' className='github-icon' />
@@ -21,7 +21,7 @@ const OutboundLink = () => {
             <a href="https://www.linkedin.com/in/ali-nix-38b9b9126/" className="webLink">LinkedIn</a>
           </div>
         </div>
-        <div className="candace">
+        <div className="candace" data-cy='candace'>
           <h4>Candace Eckels:</h4>
           <div className="github">
             <img src={gitHubIcon} alt='github-icon' className='github-icon' />
@@ -32,7 +32,7 @@ const OutboundLink = () => {
             <a href="https://www.linkedin.com/in/candace-eckels-b66089201/" className="webLink">LinkedIn</a>
           </div>
         </div>
-        <div className="dana">
+        <div className="dana" data-cy='dana'>
           <h4>Dana Chapman:</h4>
           <div className="github">
             <img src={gitHubIcon} alt='github-icon' className='github-icon' />
@@ -43,7 +43,7 @@ const OutboundLink = () => {
             <a href="https://www.linkedin.com/in/danalchapman/" className="webLink">LinkedIn</a>
           </div>
         </div>
-        <div className="emily">
+        <div className="emily" data-cy='emily'>
           <h4>Emily Miles:</h4>
           <div className="github">
             <img src={gitHubIcon} alt='github-icon' className='github-icon' />
@@ -54,7 +54,7 @@ const OutboundLink = () => {
             <a href="https://www.linkedin.com/in/emilyjmiles/" className="webLink">LinkedIn</a>
           </div>
         </div>
-        <div className="taryn">
+        <div className="taryn" data-cy='taryn'>
           <h4>Taryn Orlemann:</h4>
           <div className="github">
             <img src={gitHubIcon} alt='github-icon' className='github-icon' />
@@ -65,7 +65,7 @@ const OutboundLink = () => {
             <a href="https://www.linkedin.com/in/taryn-orlemann-99792519a/" className="webLink">LinkedIn</a>
           </div>
         </div>
-        <div className="thomas">
+        <div className="thomas" data-cy='thomas'>
           <h4>Thomas Hayes:</h4>
           <div className="github">
             <img src={gitHubIcon} alt='github-icon' className='github-icon' />
@@ -76,7 +76,7 @@ const OutboundLink = () => {
             <a href="https://www.linkedin.com/in/thomas-c-hayes/" className="webLink">LinkedIn</a>
           </div>
         </div>
-        <div className="will">
+        <div className="will" data-cy='will'>
           <h4>Will Hobson:</h4>
           <div className="github">
             <img src={gitHubIcon} alt='github-icon' className='github-icon' />
