@@ -86,11 +86,11 @@ const LandingPage = () => {
   };
 
   return (
-    <section className="landing-page-container">
-      <div className="container search-tags-container">
+    <section className="landing-page-container" data-cy='landing-page'>
+      <div className="container search-tags-container" data-cy='search-tags'>
         { searchTags }
       </div>
-      <div className="container therapist-cards-container">
+      <div className="container therapist-cards-container" data-cy='therapists-card-container'>
         { (loading && !data) && <h1>Loading...</h1> }
         { error && <h1>There was an error loading the data. { `${error.message}` }</h1> }
         { displayCards() }
