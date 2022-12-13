@@ -1,30 +1,32 @@
 .footer {
-  border: 2px solid red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
   width: 100%;
-  height: 15vh;
+  height: 10vh;
+  margin: 0.5%;
+}
+
+.resources {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.links {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.resources {
-  border: 2px solid blue;
-  width: 100%;
+.coping-links {
   display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
+  justify-content: space-between;
+  width: 50vw;
 }
 
-.general {
-  border: 2px solid green;
-}
-
-.coping {
-  border: 2px solid white;
-  display: flex;
-  flex-direction: column;
-}
-
-.help-lines {
-  border: 2px solid orange;
+a {
+  color: #5ad3ff
 }
