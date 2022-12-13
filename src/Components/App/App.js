@@ -4,7 +4,8 @@ import Footer from '../Footer/Footer';
 import OutboundLink from '../OutboundLink/OutboundLink';
 import TherapistPage from '../TherapistPage/TherapistPage';
 import ErrorMessage from '../ErrorMessage/ErrorMessage';
-import { Switch, Route } from 'react-router-dom';
+import BadUrl from '../BadUrl/BadUrl';
+import { Switch, Route, Redirect } from 'react-router-dom';
 import { useTherapists } from '../../utilities';
 
 const App = () => {
@@ -17,38 +18,38 @@ const App = () => {
       <header className="app-header">
         <h1 >Equilibrium</h1>
       </header>
-      <Switch >
+      {error
+      ? <ErrorMessage error={error} />
+      : <Switch >
         <Route exact path="/" >
-          {error 
-          ? <ErrorMessage error={error} />
-          : <LandingPage />}
+         <LandingPage />
         </Route>
         <Route exact path="/outbound">
-        {error 
-          ? <ErrorMessage error={error} />
-          : <OutboundLink />}
+          <OutboundLink />
         </Route>
-        <Route path="/:id"
+        <Route exact path="/:id"
           render={ ({ match }) => {
             const individualTherapist = data.therapists.find(therapist => therapist.id === match.params.id);
-            return (
-              <div className="therapist-display"> {
-              error
-              ? <ErrorMessage error={error} />
-              : <TherapistPage 
-                id={ individualTherapist.id } 
-                key={ individualTherapist.id } 
-                name={ individualTherapist.name } 
-                address={ individualTherapist.address } 
-                phoneNumber={ individualTherapist.phoneNumber } 
-                labels={ individualTherapist.labels } 
-                imageUrl={ individualTherapist.imageUrl}
-                bio={ individualTherapist.bio } 
-                practice={individualTherapist.practice }/>
+            if (!individualTherapist) {
+              return <Redirect to="/"/>
             }
-            </div>)
-          } } />
+            return <TherapistPage 
+              id={ individualTherapist.id } 
+              key={ individualTherapist.id } 
+              name={ individualTherapist.name } 
+              address={ individualTherapist.address } 
+              phoneNumber={ individualTherapist.phoneNumber } 
+              labels={ individualTherapist.labels } 
+              imageUrl={ individualTherapist.imageUrl}
+              bio={ individualTherapist.bio } 
+              practice={individualTherapist.practice }/>
+          } } 
+        />
+        <Route path="/*">
+          <BadUrl />
+        </Route>
       </Switch>
+      }
       <Footer />
     </main>
   );
