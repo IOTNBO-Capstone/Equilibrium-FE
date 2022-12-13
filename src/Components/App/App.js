@@ -16,7 +16,7 @@ const App = () => {
   return (
     <main className="app-main">
       <header className="app-header">
-        <h1 >Equilibrium</h1>
+        <h1 data-cy='title'>Equilibrium</h1>
       </header>
       <Switch >
         <Route exact path="/" >

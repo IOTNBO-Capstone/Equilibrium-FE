@@ -5,18 +5,18 @@ describe('Landing Page Flows', () => {
   });
 
   it('Should be able to see the title', () => {
-    cy.get('h1')
+    cy.get('[data-cy="title"]')
       .should('be.visible')
       .contains('Equilibrium')
   });
 
   it('Should be able to see a display of therapists', () => {
-    cy.get('.landing-page-container')
+    cy.get('[data-cy="landing-page"]')
       .should('be.visible')
   });
 
   it('Should display optional labels to filter by', () => {
-    cy.get('.search-tags-container')
+    cy.get('[data-cy="search-tags"]')
     .children()
     .should('be.visible')
     .should('have.length', 13)
@@ -28,7 +28,7 @@ describe('Landing Page Flows', () => {
   });
 
   it('Should have a container with the therapists', () => {
-    cy.get('.therapist-cards-container')
+    cy.get('[data-cy="therapists-card-container"]')
       .children()
       .should('exist')
       .should('have.length', 10)
@@ -74,20 +74,20 @@ describe('Landing Page Flows', () => {
   });
 
   it('Should have a footer with links to external resources', () => {
-    cy.get('.resources')
+    cy.get('[data-cy="resources"]')
       .should('exist')
 
-    cy.get('.general')
+    cy.get('[data-cy="general-resources"]')
       .should('exist')
-    cy.get('.general > h3')
+    cy.get('[data-cy="general-resources"] > h3')
       .should('exist')
       .contains('General Mental Health')
-    cy.get('.general > .webLink')
+    cy.get('[data-cy="general-resources"] > .webLink')
       .should('exist')
     
-    cy.get('.coping')
+    cy.get('[data-cy="coping-resources"]')
       .should('exist')
-    cy.get('.coping > h3')
+    cy.get('[data-cy="coping-resources"] > h3')
       .should('exist')
       .contains('Coping Skills')
     cy.get('[href="https://success.oregonstate.edu/sites/success.oregonstate.edu/files/LearningCorner/Tools/stress_management_strategies.pdf"]')
@@ -106,25 +106,25 @@ describe('Landing Page Flows', () => {
       .should('exist')
       .contains('Anxiety and Depression')
     
-    cy.get('.help-lines')
+    cy.get('[data-cy="help-lines-resources"]')
       .should('exist')
-    cy.get('.help-lines > h3')
+    cy.get('[data-cy="help-lines-resources"] > h3')
       .should('exist')
       .contains('Help Lines')
-    cy.get('.help-lines > .webLink')
+    cy.get('[data-cy="help-lines-resources"] > .webLink')
       .should('exist')
   });
 
   it('Should be able to filter by tag', () => {
-    cy.get('.search-tags-container')
+    cy.get('[data-cy="search-tags"]')
       .children()
       .should('be.visible')
       .should('have.length', 13)
     cy.get('#tag10').click()
-    cy.get('.search-tags-container')
+    cy.get('[data-cy="therapists-card-container"]')
       .children()
       .should('be.visible')
-      // .should('have.length', 5)
+      .should('have.length', 5)
   });
 
   it('Should be able to click a therapist\'s card and go to their individual page', () => {
