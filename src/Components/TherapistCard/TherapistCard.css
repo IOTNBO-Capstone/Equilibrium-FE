@@ -8,6 +8,10 @@
   margin: 1%;
 }
 
+.profile-img {
+  border: 2px solid #FFFFFF;
+}
+
 p {
   margin: 0;
   padding: 0;
