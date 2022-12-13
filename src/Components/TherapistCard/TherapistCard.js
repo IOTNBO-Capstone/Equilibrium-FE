@@ -9,7 +9,6 @@ const TherapistCard = ({ id, name, labels, imageUrl, address, phoneNumber, pract
   const cityState = splitAdress.slice(1, 3).join(', ');
 
   const listLabels = JSON.parse(labels);
-  console.log(listLabels);
   const formatLabels = listLabels.map((label, index) => <li key={ `${label}${index}` } className="one-label">{ label }</li>);
 
   //TODO
@@ -23,7 +22,7 @@ const TherapistCard = ({ id, name, labels, imageUrl, address, phoneNumber, pract
 
   return (
     <Link to={ `/${id}` } className="therapist-card" style={ linkStyle }>
-      <img src={ imageUrl } alt="therapist profile" />
+      <img src={ imageUrl } alt="therapist profile" width="450" height="425" />
       <h2>{ name } </h2>
       <p>{ practice }</p>
       <br />
@@ -32,7 +31,9 @@ const TherapistCard = ({ id, name, labels, imageUrl, address, phoneNumber, pract
       <br />
       <p>{ phoneNumber }</p>
       <br />
-      { formatLabels }
+      <ul>
+        { formatLabels }
+      </ul>
     </Link>
   );
 };
@@ -47,4 +48,4 @@ TherapistCard.propTypes = {
   address: PropTypes.string.isRequired,
   phoneNumber: PropTypes.string.isRequired,
   practice: PropTypes.string.isRequired
-}
+};
