@@ -11,35 +11,42 @@ const App = () => {
   const { data, loading, error } = useTherapists();
 
   if (loading && !data) return "Loading...";
-
-  if (error) return `${error.message}`;
   
   return (
-    //error && <error component goes here>, then delete line 14
     <main className="app-main">
       <header className="app-header">
         <h1 >Equilibrium</h1>
       </header>
       <Switch >
         <Route exact path="/" >
-          <LandingPage />
+          {error 
+          ? <ErrorMessage error={error} />
+          : <LandingPage />}
         </Route>
         <Route exact path="/outbound">
-          <OutboundLink />
+        {error 
+          ? <ErrorMessage error={error} />
+          : <OutboundLink />}
         </Route>
         <Route path="/:id"
           render={ ({ match }) => {
             const individualTherapist = data.therapists.find(therapist => therapist.id === match.params.id);
-            return <TherapistPage 
-              id={ individualTherapist.id } 
-              key={ individualTherapist.id } 
-              name={ individualTherapist.name } 
-              address={ individualTherapist.address } 
-              phoneNumber={ individualTherapist.phoneNumber } 
-              labels={ individualTherapist.labels } 
-              imageUrl={ individualTherapist.imageUrl}
-              bio={ individualTherapist.bio } 
-              practice={individualTherapist.practice }/>;
+            return (
+              <div className="therapist-display"> {
+              error
+              ? <ErrorMessage error={error} />
+              : <TherapistPage 
+                id={ individualTherapist.id } 
+                key={ individualTherapist.id } 
+                name={ individualTherapist.name } 
+                address={ individualTherapist.address } 
+                phoneNumber={ individualTherapist.phoneNumber } 
+                labels={ individualTherapist.labels } 
+                imageUrl={ individualTherapist.imageUrl}
+                bio={ individualTherapist.bio } 
+                practice={individualTherapist.practice }/>
+            }
+            </div>)
           } } />
       </Switch>
       <Footer />
