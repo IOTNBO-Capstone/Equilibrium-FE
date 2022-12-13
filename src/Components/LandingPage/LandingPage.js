@@ -46,7 +46,7 @@ const LandingPage = () => {
           disabled={ filteredTags.length === 5 && !filteredTags.includes(tag) ? true : false }
           onChange={ (event) => getCheckedTags(event.target.value) }
         />
-        <label>{ tag }</label>
+        <label htmlFor={ `tag${index}` }>{ tag }</label>
       </form>
     );
   });
