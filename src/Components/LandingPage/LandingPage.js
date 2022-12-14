@@ -15,9 +15,6 @@ const LandingPage = () => {
     }
     // eslint-disable-next-line
   }, [filteredTags, data]);
- 
-
-  if (loading && !data) return "Loading...";
 
   const getFilterTags = data?.therapists?.reduce((list, therapist) => {
     const formatLabels = JSON.parse(therapist.labels);
@@ -35,7 +32,7 @@ const LandingPage = () => {
     if (!filteredTags.includes(checked)) {
       setFilteredTags([...filteredTags, checked]);
     } else {
-      setFilteredTags(filteredTags.filter(tag => tag !== checked));
+      setFilteredTags(filteredTags.filter(tag => tag !== checked)); // cypress code coverage does not like line 35
     }
   };
 

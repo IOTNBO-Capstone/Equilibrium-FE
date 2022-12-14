@@ -11,29 +11,28 @@ import { useEffect } from 'react';
 
 const App = () => {
   const { data, loading, error } = useTherapists();
-
-  
   const history = useHistory();
+
   useEffect(() => {
-    if(error) {
-      history.push("/error");
+    if (error) {
+      history.push("/error"); // cypress code coverage does not like this
     }
     // eslint-disable-next-line
   }, [error]);
-  
+
   if (loading && !data) return "Loading...";
-  
+
   return (
     <main className="app-main">
       <header className="app-header">
         <h1 data-cy='title'>Equilibrium</h1>
       </header>
-       <Switch >
+      <Switch >
         <Route exact path="/" >
-         <LandingPage />
+          <LandingPage />
         </Route>
         <Route exact path="/error" >
-          <ErrorMessage error={error} />
+          <ErrorMessage error={ error } />
         </Route>
         <Route exact path="/outbound">
           <OutboundLink />
@@ -42,19 +41,19 @@ const App = () => {
           render={ ({ match }) => {
             const individualTherapist = data.therapists?.find(therapist => therapist.id === match.params.id);
             if (!individualTherapist) {
-              return <Redirect to="/"/>
+              return <Redirect to="/" />;
             }
-            return <TherapistPage 
-              id={ individualTherapist.id } 
-              key={ individualTherapist.id } 
-              name={ individualTherapist.name } 
-              address={ individualTherapist.address } 
-              phoneNumber={ individualTherapist.phoneNumber } 
-              labels={ individualTherapist.labels } 
-              imageUrl={ individualTherapist.imageUrl}
-              bio={ individualTherapist.bio } 
-              practice={individualTherapist.practice }/>
-          } } 
+            return <TherapistPage
+              id={ individualTherapist.id }
+              key={ individualTherapist.id }
+              name={ individualTherapist.name }
+              address={ individualTherapist.address }
+              phoneNumber={ individualTherapist.phoneNumber }
+              labels={ individualTherapist.labels }
+              imageUrl={ individualTherapist.imageUrl }
+              bio={ individualTherapist.bio }
+              practice={ individualTherapist.practice } />;
+          } }
         />
         <Route path="/*">
           <BadUrl />
