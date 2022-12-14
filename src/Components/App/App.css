@@ -5,7 +5,7 @@
 }
 
 .app-header {
-  height: 18vh;
+  height: 20vh;
   width: 95vw;
   display: flex;
   justify-content: center;
@@ -14,4 +14,5 @@
 
 h1 {
   font-size: 5rem;
+  font-family: 'Hammersmith One', sans-serif;
 }

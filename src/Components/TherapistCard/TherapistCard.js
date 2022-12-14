@@ -22,7 +22,7 @@ const TherapistCard = ({ id, name, labels, imageUrl, address, phoneNumber, pract
 
   return (
     <Link to={ `/${id}` } className="therapist-card" style={ linkStyle }>
-      <img src={ imageUrl } alt="therapist profile" width="450" height="425" />
+      <img src={ imageUrl } alt="therapist profile" className='profile-img' width="450" height="425" />
       <h2>{ name } </h2>
       <p>{ practice }</p>
       <br />

@@ -92,6 +92,7 @@ const LandingPage = () => {
 
   return (
     <section className="landing-page-container" data-cy='landing-page'>
+      <p className="choose">Choose up to 5 additional filters</p>
       <div className="container search-tags-container" data-cy='search-tags'>
         { searchTags }
       </div>

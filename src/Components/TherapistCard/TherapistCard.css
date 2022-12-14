@@ -8,6 +8,13 @@
   margin: 1%;
 }
 
+.profile-img {
+  align-self: center;
+  width: 100%;
+  height: auto;
+  border: 2px solid #FFFFFF;
+}
+
 p {
   margin: 0;
   padding: 0;

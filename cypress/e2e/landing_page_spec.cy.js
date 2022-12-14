@@ -81,7 +81,7 @@ describe('Landing Page Flows', () => {
       .should('exist');
     cy.get('[data-cy="general-resources"] > h3')
       .should('exist')
-      .contains('General Mental Health');
+      .contains('General Mental Health Links');
     cy.get('[data-cy="general-resources"] > .webLink')
       .should('exist');
 
@@ -89,7 +89,7 @@ describe('Landing Page Flows', () => {
       .should('exist');
     cy.get('[data-cy="coping-resources"] > h3')
       .should('exist')
-      .contains('Coping Skills');
+      .contains('Coping Skills Links');
     cy.get('[href="https://success.oregonstate.edu/sites/success.oregonstate.edu/files/LearningCorner/Tools/stress_management_strategies.pdf"]')
       .should('exist')
       .contains('Stress Management');
@@ -110,7 +110,7 @@ describe('Landing Page Flows', () => {
       .should('exist');
     cy.get('[data-cy="help-lines-resources"] > h3')
       .should('exist')
-      .contains('Help Lines');
+      .contains('Help Line Links');
     cy.get('[data-cy="help-lines-resources"] > .webLink')
       .should('exist');
   });
