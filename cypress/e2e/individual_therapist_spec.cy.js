@@ -1,6 +1,9 @@
 describe('Individual Therapist Flows', () => {
 
   beforeEach(() => {
+    cy.intercept("POST", "https://equilibrium.herokuapp.com/graphql", {
+      fixture: "data1.json"
+    })
     cy.visit('http://localhost:3000/1')
   });
 
