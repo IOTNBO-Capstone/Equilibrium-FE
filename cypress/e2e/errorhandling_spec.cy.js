@@ -1,4 +1,11 @@
 describe('BadUrl', () => {
+  beforeEach(() => {
+    cy.intercept("POST", "https://equilibrium.herokuapp.com/graphql", {
+      fixture: "data1.json"
+    })
+    cy.visit('http://localhost:3000/outbound')
+  });
+  
   it('Should redirect to home if an invalid url is entered', () => {
     cy.visit('http://localhost:3000/*')
     cy.url().should('eq', 'http://localhost:3000/')
