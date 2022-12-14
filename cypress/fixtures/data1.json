@@ -3,12 +3,26 @@
     "therapists": [
       {
         "id": "1",
-        "address": "Suite 954 373 Billy Ville, West Judsonmouth, MS 21150",
-        "phoneNumber": "863-571-0641",
+        "address": "60136 Heidenreich Via, New Meta, OR 03728-2318",
+        "phoneNumber": "766.314.3980",
         "name": "Sarah Jones",
-        "labels": "[\"Sliding Scale\", \"Works with Neurodivergence\", \"Grief Counseling\", \"Works with Depression\"]",
+        "labels": "[\"Works with\", \"In-house Pharmacy\", \"Works with Trauma-based disorders\", \"Grief Counseling\"]",
         "imageUrl": "https://loremflickr.com/300/300",
         "bio": "here to stay",
+        "practice": {
+          "id": "1",
+          "name": "ABC therapy",
+          "websiteUrl": "WWW.ABCD.com"
+        }
+      },
+      {
+        "id": "2",
+        "address": "599 Walter Place, East Randy, NC 94646",
+        "phoneNumber": "919-586-3184",
+        "name": "Peter Piper",
+        "labels": "[\"Works with Addiction\", \"Works with Depression\", \"Works with Trauma-based disorders\", \"Family Therapy/Marriage Counseling\"]",
+        "imageUrl": "https://loremflickr.com/300/300",
+        "bio": "slightly different",
         "practice": {
           "id": "1",
           "name": "ABC therapy",

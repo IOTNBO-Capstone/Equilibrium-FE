@@ -1,6 +1,9 @@
 describe('Landing Page Flows', () => {
 
   beforeEach(() => {
+    cy.intercept("POST", "https://equilibrium.herokuapp.com/graphql", {
+      fixture: "data1.json"
+    })
     cy.visit('http://localhost:3000/');
   });
 
@@ -19,10 +22,10 @@ describe('Landing Page Flows', () => {
     cy.get('[data-cy="search-tags"]')
       .children()
       .should('be.visible')
-      .should('have.length', 13);
-    cy.get('[data-cy="label-12"]')
+      .should('have.length', 7);
+    cy.get('[data-cy="label-6"] > label')
       .should('exist')
-      .contains('POC');
+      .contains('Family Therapy/Marriage Counseling');
     cy.get('[data-cy="label-13"]')
       .should('not.exist');
   });
@@ -31,10 +34,10 @@ describe('Landing Page Flows', () => {
     cy.get('[data-cy="therapists-card-container"]')
       .children()
       .should('exist')
-      .should('have.length', 10);
-    cy.get('[href="/10"]')
+      .should('have.length', 2);
+    cy.get('[href="/2"]')
       .should('exist');
-    cy.get('[href="/11"]')
+    cy.get('[href="/3"]')
       .should('not.exist');
   });
 
@@ -119,12 +122,12 @@ describe('Landing Page Flows', () => {
     cy.get('[data-cy="search-tags"]')
       .children()
       .should('be.visible')
-      .should('have.length', 13);
-    cy.get('#tag10').click();
+      .should('have.length', 7);
+      cy.get('#tag6').click();
     cy.get('[data-cy="therapists-card-container"]')
       .children()
       .should('be.visible')
-      .should('have.length', 5);
+      .should('have.length', 1);
   });
 
   it('Should be able to click a therapist\'s card and go to their individual page', () => {
