@@ -1,6 +1,6 @@
 import React from "react";
-import { Link } from 'react-router-dom'
-import "./BadUrl.css"
+import { Link } from 'react-router-dom';
+import "./BadUrl.css";
 
 const BadUrl = () => {
   return (
@@ -10,7 +10,7 @@ const BadUrl = () => {
         <button className="home-btn">Home</button>
       </Link>
     </div>
-  )
-}
+  );
+};
 
-export default BadUrl
+export default BadUrl;
