@@ -89,7 +89,7 @@ const OutboundLink = () => {
         </div>
       </div>
       <Link to='/'>
-        <button>Return to Main Page</button>
+        <button className="button">Return to Main Page</button>
       </Link>
     </div>
   )
