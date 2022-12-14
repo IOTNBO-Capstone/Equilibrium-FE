@@ -5,12 +5,22 @@ import OutboundLink from '../OutboundLink/OutboundLink';
 import TherapistPage from '../TherapistPage/TherapistPage';
 import ErrorMessage from '../ErrorMessage/ErrorMessage';
 import BadUrl from '../BadUrl/BadUrl';
-import { Switch, Route, Redirect } from 'react-router-dom';
+import { Switch, Route, Redirect, useHistory } from 'react-router-dom';
 import { useTherapists } from '../../utilities';
+import { useEffect } from 'react';
 
 const App = () => {
   const { data, loading, error } = useTherapists();
 
+  
+  const history = useHistory();
+  useEffect(() => {
+    if(error) {
+      history.push("/error");
+    }
+    // eslint-disable-next-line
+  }, [error]);
+  
   if (loading && !data) return "Loading...";
   
   return (
@@ -18,18 +28,19 @@ const App = () => {
       <header className="app-header">
         <h1 >Equilibrium</h1>
       </header>
-      {error
-      ? <ErrorMessage error={error} />
-      : <Switch >
+       <Switch >
         <Route exact path="/" >
          <LandingPage />
+        </Route>
+        <Route exact path="/error" >
+          <ErrorMessage error={error} />
         </Route>
         <Route exact path="/outbound">
           <OutboundLink />
         </Route>
         <Route exact path="/:id"
           render={ ({ match }) => {
-            const individualTherapist = data.therapists.find(therapist => therapist.id === match.params.id);
+            const individualTherapist = data.therapists?.find(therapist => therapist.id === match.params.id);
             if (!individualTherapist) {
               return <Redirect to="/"/>
             }
@@ -49,7 +60,6 @@ const App = () => {
           <BadUrl />
         </Route>
       </Switch>
-      }
       <Footer />
     </main>
   );

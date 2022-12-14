@@ -10,11 +10,21 @@ const LandingPage = () => {
   const { data, error, loading } = useTherapists();
 
   useEffect(() => {
-    getTherapistByTag();
+    if (data) {
+      getTherapistByTag();
     // eslint-disable-next-line
-  }, [filteredTags]);
+    }
+  }, [filteredTags, data]);
+  // useEffect(() => {
+  //   if(error) {
+  //     history.push("/error");
+  //   }
+  //   // eslint-disable-next-line
+  // }, [error]);
 
-  const getFilterTags = data.therapists.reduce((list, therapist) => {
+  if (loading && !data) return "Loading...";
+
+  const getFilterTags = data?.therapists?.reduce((list, therapist) => {
     const formatLabels = JSON.parse(therapist.labels);
 
     formatLabels.forEach(label => {
@@ -34,7 +44,7 @@ const LandingPage = () => {
     }
   };
 
-  const searchTags = getFilterTags.map((tag, index) => {
+  const searchTags = getFilterTags?.map((tag, index) => {
     return (
       <form key={ index } className="single-tag" data-cy={ `label-${index}` }>
         <input
