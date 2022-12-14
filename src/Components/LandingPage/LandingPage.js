@@ -12,15 +12,10 @@ const LandingPage = () => {
   useEffect(() => {
     if (data) {
       getTherapistByTag();
-    // eslint-disable-next-line
     }
+    // eslint-disable-next-line
   }, [filteredTags, data]);
-  // useEffect(() => {
-  //   if(error) {
-  //     history.push("/error");
-  //   }
-  //   // eslint-disable-next-line
-  // }, [error]);
+ 
 
   if (loading && !data) return "Loading...";
 
