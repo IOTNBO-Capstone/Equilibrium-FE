@@ -12,6 +12,14 @@
   overflow-x: hidden;
 }
 
+.landing-page-container::-webkit-scrollbar {
+  display: none;
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+}
+
 .choose {
   margin-bottom: 0.5%;
   font-size: 1.25rem;

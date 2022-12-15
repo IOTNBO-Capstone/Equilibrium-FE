@@ -166,7 +166,7 @@ describe('Individual Therapist Flows', () => {
     cy.get('[data-cy="New Meta, OR 03728-2318-address-1"]')
       .should('exist')
       .contains('New Meta, OR 03728-2318');
-    cy.get('.individual-section > :nth-child(8)')
+    cy.get('[data-cy="practice-url"]')
       .should('exist')
       .contains('WWW.ABCD.com');
     cy.get('[data-cy="labels"]')
@@ -183,7 +183,7 @@ describe('Individual Therapist Flows', () => {
   });
 
   it('Should be able to visit the therapist\'s practice site', () => {
-    cy.get('.individual-section > :nth-child(8)').click();
+    cy.get('[data-cy="practice-url"]').click();
     cy.url().should('eq', 'http://localhost:3000/outbound');
   });
 
@@ -192,6 +192,7 @@ describe('Individual Therapist Flows', () => {
     cy.url().should('eq', 'http://localhost:3000/');
   });
 });
+
 describe('BadUrl', () => {
   beforeEach(() => {
     cy.intercept("POST", "https://equilibrium.herokuapp.com/graphql", {
@@ -252,17 +253,15 @@ describe('Outbound Page', () => {
       .get('[data-cy="ali"] > h4')
       .should('exist')
       .contains('Ali Nix')
-      .get('[data-cy="ali"] > .github')
+      .get('[data-cy="ali"] > .link-icons')
       .should('exist')
-      .get('[data-cy="ali"] > .github > .github-icon')
+      .get('[data-cy="ali-github"]')
       .should('exist')
-      .get('[data-cy="ali"] > .github > .webLink')
+      .get('[data-cy="ali-github-link"]')
       .should('exist')
-      .get('[data-cy="ali"] > .linkedin')
+      .get('[data-cy="ali-linkedin"]')
       .should('exist')
-      .get('[data-cy="ali"] > .linkedin > .linkedin-icon')
-      .should('exist')
-      .get('[data-cy="ali"] > .linkedin > .webLink')
+      .get('[data-cy="ali-linkedin-link"]')
       .should('exist');
 
     cy.get('[data-cy="candace"]')
@@ -270,17 +269,15 @@ describe('Outbound Page', () => {
       .get('[data-cy="candace"] > h4')
       .should('exist')
       .contains('Candace Eckels')
-      .get('[data-cy="candace"] > .github')
+      .get('[data-cy="candace"] .link-icons')
       .should('exist')
-      .get('[data-cy="candace"] > .github > .github-icon')
+      .get('[data-cy="candace-github"]')
       .should('exist')
-      .get('[data-cy="candace"] > .github > .webLink')
+      .get('[data-cy="candace-github-link"]')
       .should('exist')
-      .get('[data-cy="candace"] > .linkedin')
+      .get('[data-cy="candace-linkedin"]')
       .should('exist')
-      .get('[data-cy="candace"] > .linkedin > .linkedin-icon')
-      .should('exist')
-      .get('[data-cy="candace"] > .linkedin > .webLink')
+      .get('[data-cy="candace-linkedin-link"]')
       .should('exist');
 
     cy.get('[data-cy="dana"]')
@@ -288,17 +285,15 @@ describe('Outbound Page', () => {
       .get('[data-cy="dana"] > h4')
       .should('exist')
       .contains('Dana Chapman')
-      .get('[data-cy="dana"] > .github')
+      .get('[data-cy="dana"] > .link-icons')
       .should('exist')
-      .get('[data-cy="dana"] > .github > .github-icon')
+      .get('[data-cy="dana-github"]')
       .should('exist')
-      .get('[data-cy="dana"] > .github > .webLink')
+      .get('[data-cy="dana-github-link"]')
       .should('exist')
-      .get('[data-cy="dana"] > .linkedin')
+      .get('[data-cy="dana-linkedin"]')
       .should('exist')
-      .get('[data-cy="dana"] > .linkedin > .linkedin-icon')
-      .should('exist')
-      .get('[data-cy="dana"] > .linkedin > .webLink')
+      .get('[data-cy="dana-linkedin-link"]')
       .should('exist');
 
     cy.get('[data-cy="emily"]')
@@ -306,17 +301,15 @@ describe('Outbound Page', () => {
       .get('[data-cy="emily"] > h4')
       .should('exist')
       .contains('Emily Miles')
-      .get('[data-cy="emily"] > .github')
+      .get('[data-cy="emily"] > .link-icons')
       .should('exist')
-      .get('[data-cy="emily"] > .github > .github-icon')
+      .get('[data-cy="emily-github"]')
       .should('exist')
-      .get('[data-cy="emily"] > .github > .webLink')
+      .get('[data-cy="emily-github-link"]')
       .should('exist')
-      .get('[data-cy="emily"] > .linkedin')
+      .get('[data-cy="emily-linkedin"]')
       .should('exist')
-      .get('[data-cy="emily"] > .linkedin > .linkedin-icon')
-      .should('exist')
-      .get('[data-cy="emily"] > .linkedin > .webLink')
+      .get('[data-cy="emily-linkedin-link"]')
       .should('exist');
 
     cy.get('[data-cy="taryn"]')
@@ -324,17 +317,15 @@ describe('Outbound Page', () => {
       .get('[data-cy="taryn"] > h4')
       .should('exist')
       .contains('Taryn Orlemann')
-      .get('[data-cy="taryn"] > .github')
+      .get('[data-cy="taryn"] > .link-icons')
       .should('exist')
-      .get('[data-cy="taryn"] > .github > .github-icon')
+      .get('[data-cy="taryn-github"]')
       .should('exist')
-      .get('[data-cy="taryn"] > .github > .webLink')
+      .get('[data-cy="taryn-github-link"]')
       .should('exist')
-      .get('[data-cy="taryn"] > .linkedin')
+      .get('[data-cy="taryn-linkedin"]')
       .should('exist')
-      .get('[data-cy="taryn"] > .linkedin > .linkedin-icon')
-      .should('exist')
-      .get('[data-cy="taryn"] > .linkedin > .webLink')
+      .get('[data-cy="taryn-linkedin-link"]')
       .should('exist');
 
     cy.get('[data-cy="thomas"]')
@@ -342,17 +333,15 @@ describe('Outbound Page', () => {
       .get('[data-cy="thomas"] > h4')
       .should('exist')
       .contains('Thomas Hayes')
-      .get('[data-cy="thomas"] > .github')
+      .get('[data-cy="thomas"] > .link-icons')
       .should('exist')
-      .get('[data-cy="thomas"] > .github > .github-icon')
+      .get('[data-cy="thomas-github"]')
       .should('exist')
-      .get('[data-cy="thomas"] > .github > .webLink')
+      .get('[data-cy="thomas-github-link"]')
       .should('exist')
-      .get('[data-cy="thomas"] > .linkedin')
+      .get('[data-cy="thomas-linkedin"]')
       .should('exist')
-      .get('[data-cy="thomas"] > .linkedin > .linkedin-icon')
-      .should('exist')
-      .get('[data-cy="thomas"] > .linkedin > .webLink')
+      .get('[data-cy="thomas-linkedin-link"]')
       .should('exist');
 
     cy.get('[data-cy="will"]')
@@ -360,17 +349,15 @@ describe('Outbound Page', () => {
       .get('[data-cy="will"] > h4')
       .should('exist')
       .contains('Will Hobson')
-      .get('[data-cy="will"] > .github')
+      .get('[data-cy="will"] > .link-icons')
       .should('exist')
-      .get('[data-cy="will"] > .github > .github-icon')
+      .get('[data-cy="will-github"]')
       .should('exist')
-      .get('[data-cy="will"] > .github > .webLink')
+      .get('[data-cy="will-github-link"]')
       .should('exist')
-      .get('[data-cy="will"] > .linkedin')
+      .get('[data-cy="will-linkedin"]')
       .should('exist')
-      .get('[data-cy="will"] > .linkedin > .linkedin-icon')
-      .should('exist')
-      .get('[data-cy="will"] > .linkedin > .webLink')
+      .get('[data-cy="will-linkedin-link"]')
       .should('exist');
   });
 
