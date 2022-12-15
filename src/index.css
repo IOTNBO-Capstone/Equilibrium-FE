@@ -1,7 +1,8 @@
 html {
   background-image: url('./Assets/Equilibrium-bkgd.webp');
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   color: #FFFFFF;
+  flex-wrap: wrap;
 }

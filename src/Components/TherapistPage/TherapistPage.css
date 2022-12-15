@@ -2,6 +2,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow-y: scroll;
+  overflow-x: hidden;
   width: 90vw;
   height: 62.5vh;
   background: #000000;
@@ -10,9 +12,23 @@
   padding: 1%;
 }
 
+.therapist-info {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 85vw;
+}
+
+.bio-section {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+}
+
 .labels-container {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   color: #000000;
   background: linear-gradient(90deg, #FFA7A7 0%, #FFBB7C 20.83%, #FFF496 41.15%, #85FF71 60.94%, #78A6FF 81.25%, #CC79FF 100%);
   border: 1px solid #FFFFFF;
