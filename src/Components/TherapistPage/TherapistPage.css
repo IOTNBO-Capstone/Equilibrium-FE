@@ -1,4 +1,4 @@
-.individual-section{
+.individual-section {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,6 +10,14 @@
   opacity: 0.8;
   box-shadow: 0px 0px 4px 4px rgba(255, 255, 255, 0.5);
   padding: 1%;
+}
+
+.individual-section::-webkit-scrollbar {
+  display: none;
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
 }
 
 .therapist-info {
