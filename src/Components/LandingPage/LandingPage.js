@@ -58,7 +58,7 @@ const LandingPage = () => {
       const formatLabels = JSON.parse(therapist.labels);
 
       filteredTags.forEach(tag => {
-        if (formatLabels.includes(tag)) {
+        if (formatLabels.includes(tag) && !list.includes(therapist)) {
           list.push(therapist);
         }
       });
