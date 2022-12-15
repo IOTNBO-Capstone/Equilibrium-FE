@@ -24,7 +24,7 @@ const TherapistPage = ({ id, name, address, labels, imageUrl, bio, practice }) =
           <p data-cy={ `${practice.name}-${id}` }>{ practice.name }</p>
           <p data-cy={ `${street}-address-${id}` }>{ street }</p>
           <p data-cy={ `${cityState}-address-${id}` }>{ cityState }</p>
-          <Link to='/outbound'>
+          <Link to='/outbound' data-cy="practice-url">
             <p >{ practice.websiteUrl }</p>
           </Link>
         </div>

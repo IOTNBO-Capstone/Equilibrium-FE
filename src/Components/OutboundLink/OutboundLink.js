@@ -14,77 +14,77 @@ const OutboundLink = () => {
         <div className="ali" data-cy='ali'>
           <h4>Ali Nix</h4>
           <div className="link-icons">
-            <a href="https://github.com/alinix1" className="webLink">
-              <img src={ gitHubIcon } alt='github-icon' className='github-icon' />
+            <a href="https://github.com/alinix1" className="webLink" data-cy='ali-github-link'>
+              <img src={ gitHubIcon } alt='github-icon' className='github-icon' data-cy='ali-github' />
             </a>
-            <a href="https://www.linkedin.com/in/ali-nix-38b9b9126/" className="webLink">
-              <img src={ linkedInIcon } alt='linkedin-icon' className='linkedin-icon' />
+            <a href="https://www.linkedin.com/in/ali-nix-38b9b9126/" className="webLink" data-cy='ali-linkedin-link'>
+              <img src={ linkedInIcon } alt='linkedin-icon' className='linkedin-icon' data-cy='ali-linkedin' />
             </a>
           </div>
         </div>
         <div className="candace" data-cy='candace'>
           <h4>Candace Eckels</h4>
           <div className="link-icons">
-            <a href="https://github.com/cece-132" className="webLink">
-              <img src={ gitHubIcon } alt='github-icon' className='github-icon' />
+            <a href="https://github.com/cece-132" className="webLink" data-cy='candace-github-link'>
+              <img src={ gitHubIcon } alt='github-icon' className='github-icon' data-cy='candace-github' />
             </a>
-            <a href="https://www.linkedin.com/in/candace-eckels-b66089201/" className="webLink">
-              <img src={ linkedInIcon } alt='linkedin-icon' className='linkedin-icon' />
+            <a href="https://www.linkedin.com/in/candace-eckels-b66089201/" className="webLink" data-cy='candace-linkedin-link'>
+              <img src={ linkedInIcon } alt='linkedin-icon' className='linkedin-icon' data-cy='candace-linkedin' />
             </a>
           </div>
         </div>
         <div className="dana" data-cy='dana'>
           <h4>Dana Chapman</h4>
           <div className="link-icons">
-            <a href="https://github.com/danalchapman" className="webLink">
-              <img src={ gitHubIcon } alt='github-icon' className='github-icon' />
+            <a href="https://github.com/danalchapman" className="webLink" data-cy='dana-github-link'>
+              <img src={ gitHubIcon } alt='github-icon' className='github-icon' data-cy='dana-github' />
             </a>
-            <a href="https://www.linkedin.com/in/danalchapman/" className="webLink">
-              <img src={ linkedInIcon } alt='linkedin-icon' className='linkedin-icon' />
+            <a href="https://www.linkedin.com/in/danalchapman/" className="webLink" data-cy='dana-linkedin-link'>
+              <img src={ linkedInIcon } alt='linkedin-icon' className='linkedin-icon' data-cy='dana-linkedin' />
             </a>
           </div>
         </div>
         <div className="emily" data-cy='emily'>
           <h4>Emily Miles</h4>
           <div className="link-icons">
-            <a href="https://github.com/emilyjmiles" className="webLink">
-              <img src={ gitHubIcon } alt='github-icon' className='github-icon' />
+            <a href="https://github.com/emilyjmiles" className="webLink" data-cy='emily-github-link'>
+              <img src={ gitHubIcon } alt='github-icon' className='github-icon' data-cy='emily-github' />
             </a>
-            <a href="https://www.linkedin.com/in/emilyjmiles/" className="webLink">
-              <img src={ linkedInIcon } alt='linkedin-icon' className='linkedin-icon' />
+            <a href="https://www.linkedin.com/in/emilyjmiles/" className="webLink" data-cy='emily-linkedin-link'>
+              <img src={ linkedInIcon } alt='linkedin-icon' className='linkedin-icon' data-cy='emily-linkedin' />
             </a>
           </div>
         </div>
         <div className="taryn" data-cy='taryn'>
           <h4>Taryn Orlemann</h4>
           <div className="link-icons">
-            <a href="https://github.com/torlemann" className="webLink">
-              <img src={ gitHubIcon } alt='github-icon' className='github-icon' />
+            <a href="https://github.com/torlemann" className="webLink" data-cy='taryn-github-link'>
+              <img src={ gitHubIcon } alt='github-icon' className='github-icon' data-cy='taryn-github' />
             </a>
-            <a href="https://www.linkedin.com/in/taryn-orlemann-99792519a/" className="webLink">
-              <img src={ linkedInIcon } alt='linkedin-icon' className='linkedin-icon' />
+            <a href="https://www.linkedin.com/in/taryn-orlemann-99792519a/" className="webLink" data-cy='taryn-linkedin-link'>
+              <img src={ linkedInIcon } alt='linkedin-icon' className='linkedin-icon' data-cy='taryn-linkedin' />
             </a>
           </div>
         </div>
         <div className="thomas" data-cy='thomas'>
           <h4>Thomas Hayes</h4>
           <div className="link-icons">
-            <a href="https://github.com/thayes87" className="webLink">
-              <img src={ gitHubIcon } alt='github-icon' className='github-icon' />
+            <a href="https://github.com/thayes87" className="webLink" data-cy='thomas-github-link'>
+              <img src={ gitHubIcon } alt='github-icon' className='github-icon' data-cy='thomas-github' />
             </a>
-            <a href="https://www.linkedin.com/in/thomas-c-hayes/" className="webLink">
-              <img src={ linkedInIcon } alt='linkedin-icon' className='linkedin-icon' />
+            <a href="https://www.linkedin.com/in/thomas-c-hayes/" className="webLink" data-cy='thomas-linkedin-link'>
+              <img src={ linkedInIcon } alt='linkedin-icon' className='linkedin-icon' data-cy='thomas-linkedin' />
             </a>
           </div>
         </div>
         <div className="will" data-cy='will'>
           <h4>Will Hobson</h4>
           <div className="link-icons">
-            <a href="https://github.com/willhobson85" className="webLink">
-              <img src={ gitHubIcon } alt='github-icon' className='github-icon' />
+            <a href="https://github.com/willhobson85" className="webLink" data-cy='will-github-link'>
+              <img src={ gitHubIcon } alt='github-icon' className='github-icon' data-cy='will-github' />
             </a>
-            <a href="https://www.linkedin.com/in/the-william-hobson/" className="webLink">
-              <img src={ linkedInIcon } alt='linkedin-icon' className='linkedin-icon' />
+            <a href="https://www.linkedin.com/in/the-william-hobson/" className="webLink" data-cy='will-linkedin-link'>
+              <img src={ linkedInIcon } alt='linkedin-icon' className='linkedin-icon' data-cy='will-linkedin' />
             </a>
           </div>
         </div>
