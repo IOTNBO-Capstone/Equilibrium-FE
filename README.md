@@ -19,12 +19,15 @@
 
 ## About The Project
 
+- This web application provides a list of therapist cards with additional information/details along with mental health resources to adults with limited financial means. It was created with both a front-end and back-end team of Turing students utilizing React framework, Ruby on Rails, and GraphQL.
 
-[Click here to explore the Equilibrium app!]()
+[Click here to explore the Equilibrium app!](https://equilibrium-iotnbo.netlify.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Project Spec
+
+The project specs can be found [here](https://mod4.turing.edu/projects/capstone/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -69,11 +72,15 @@ You can find the project [here](https://github.com/IOTNBO-Capstone/IOTNBO-FE) an
 
 ## Usage
 
-[Gifs/Videos]()
+[Gifs/Videos](![2022-12-15 12 25 37](https://user-images.githubusercontent.com/28677929/207949613-bedba8c8-9224-42fc-a7da-2fc05d54e0af.gif))
 
 Future Iterations:
 
-- [ ] 
+- [ ] Light mode for design 
+- [ ] Responsive web design
+- [ ] Reviews of therapists/practices 
+- [ ] Consumption of an API
+- [ ] Add a medications search engine (find the cheapest meds and where, i.e., GoodRx) 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -108,11 +115,23 @@ Utilized testing to create a smooth user experience using [Cypress](https://www.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- ORGANIZATIONAL RESOURCES -->
+
+## Organizational Resources 
+
+The following resources helped organize our project planning: 
+
+- (https://miro.com/app/board/uXjVP-XsNqM=/)
+
 <!-- ACKNOWLEDGMENTS -->
 
 ## Acknowledgments
 
 The following resources helped us build this project:
+
+[miro]
+[mvp]
+[GH project board]
 
 [![MDN Docs][mdn-shield]][mdn]
 [![Turing School](https://img.shields.io/badge/Turing_School-030303?style=for-the-badge)](https://turing.edu/)
@@ -137,4 +156,7 @@ The following resources helped us build this project:
 [mdn-shield]: https://img.shields.io/badge/MDN_Web_Docs-black?style=for-the-badge&logo=mdnwebdocs&logoColor=white
 [mdn]: https://developer.mozilla.org/en-US/
 [contributors-shield]: https://img.shields.io/badge/Contributors-1-2ea44f?style=for-the-badge
+[miro]: https://miro.com/app/board/uXjVP-XsNqM=/
+[mvp]: https://docs.google.com/document/d/1Ptfo2c91jaLiTu2lmiIDEzmLHaEIdTzKzV8pYrR-Ky8/edit
+[GH project board]: https://github.com/orgs/IOTNBO-Capstone/projects/1
 [product-screenshot]: images/screenshot.png
