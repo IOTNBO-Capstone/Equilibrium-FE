@@ -1,6 +1,6 @@
 <a name="readme-top"></a>
 
-![equilibrium-logo]()
+<p align="center"><img width="506" alt="Screenshot 2023-01-23 at 1 15 31 PM" src="https://user-images.githubusercontent.com/103063934/214140774-79979b36-bbfd-4013-a9cf-5a6219139ace.png"></p>
 
 ## Table of Contents
 
