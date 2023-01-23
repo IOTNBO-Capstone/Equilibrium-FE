@@ -143,9 +143,11 @@ The following resources helped us build this project:
 
 ### Wins:
 
+This was our first project implementing the Front End and Back End technologies together. The collaboration within our team helped create a great environment to work in.
 
 ### Challenges:
 
+When the project started, we started to move in a direction different than the original pitch of what we were intending to make. After meeting and voicing our thoughts, we were able to get back on track with creating a project that we were all proud to be a part of. 
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
