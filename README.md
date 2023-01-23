@@ -19,7 +19,7 @@
 
 ## About The Project
 
-- This web application provides a list of therapist cards with additional information/details along with mental health resources to adults with limited financial means. It was created with both a front-end and back-end team of Turing students utilizing React framework, Ruby on Rails, and GraphQL.
+This web application provides a list of therapist cards with additional information/details along with mental health resources to adults with limited financial means. It was created with both a front-end and back-end team of Turing students utilizing React framework, Ruby on Rails, and GraphQL.
 
 [Click here to explore the Equilibrium app!](https://equilibrium-iotnbo.netlify.app/)
 
@@ -52,13 +52,13 @@ The project specs can be found [here](https://mod4.turing.edu/projects/capstone/
 
 # Getting Started
 
-You can find the project [here](https://github.com/IOTNBO-Capstone/IOTNBO-FE) and follow the instructions below to get started.
+You can find the project [here](https://github.com/IOTNBO-Capstone/Equilibrium-FE) and follow the instructions below to get started.
 
 ### Installation
 
 1. Clone the repo
    ```sh
-   git clone git@github.com:IOTNBO-Capstone/IOTNBO-FE.git
+   git clone git@github.com:IOTNBO-Capstone/Equilibrium-FE.git
 2. Install NPM packages
    ```sh
    npm install
@@ -72,7 +72,7 @@ You can find the project [here](https://github.com/IOTNBO-Capstone/IOTNBO-FE) an
 
 ## Usage
 
-[Gifs/Videos](![2022-12-15 12 25 37](https://user-images.githubusercontent.com/28677929/207949613-bedba8c8-9224-42fc-a7da-2fc05d54e0af.gif))
+![2022-12-15 12 25 37](https://user-images.githubusercontent.com/28677929/207949613-bedba8c8-9224-42fc-a7da-2fc05d54e0af.gif)
 
 Future Iterations:
 
@@ -121,17 +121,14 @@ Utilized testing to create a smooth user experience using [Cypress](https://www.
 
 The following resources helped organize our project planning: 
 
-- (https://miro.com/app/board/uXjVP-XsNqM=/)
+- [Miro](https://miro.com/app/board/uXjVP-XsNqM=/) for code architecture planning and wireframing.
+- [GH project board](https://github.com/orgs/IOTNBO-Capstone/projects/1) for organizing our tasks and keeping the whole team up to date.
 
 <!-- ACKNOWLEDGMENTS -->
 
 ## Acknowledgments
 
 The following resources helped us build this project:
-
-[miro]
-[mvp]
-[GH project board]
 
 [![MDN Docs][mdn-shield]][mdn]
 [![Turing School](https://img.shields.io/badge/Turing_School-030303?style=for-the-badge)](https://turing.edu/)
@@ -157,7 +154,7 @@ When the project started, we started to move in a direction different than the o
 
 [mdn-shield]: https://img.shields.io/badge/MDN_Web_Docs-black?style=for-the-badge&logo=mdnwebdocs&logoColor=white
 [mdn]: https://developer.mozilla.org/en-US/
-[contributors-shield]: https://img.shields.io/badge/Contributors-1-2ea44f?style=for-the-badge
+[contributors-shield]: https://img.shields.io/badge/Contributors-4-2ea44f?style=for-the-badge
 [miro]: https://miro.com/app/board/uXjVP-XsNqM=/
 [mvp]: https://docs.google.com/document/d/1Ptfo2c91jaLiTu2lmiIDEzmLHaEIdTzKzV8pYrR-Ky8/edit
 [GH project board]: https://github.com/orgs/IOTNBO-Capstone/projects/1
